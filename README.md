@@ -48,7 +48,7 @@ I chose the following stack to balance performance, simplicity, and open-source 
 
 GeoSpaider/
 ├── bhopal_s2/              # Example Sentinel-2 imagery + metadata
-├── notebook/               # Jupyter notebooks (experiments)
+├── notebook/               # Colab notebook (experiments)
 ├── src/                    # Core source code
 │   ├── demo.py             # Demo entrypoint
 │   ├── embed.py            # Embedding + vector store builder
