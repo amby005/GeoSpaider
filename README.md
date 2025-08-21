@@ -82,6 +82,13 @@ Expected output:
 Top 1: S2A_43QGF_20240828_0_L2A | date=2024-08-28T05:32:33Z | cloud=27.7
 [preview] bhopal_s2/previews/S2A_43QGF_20240828_0_L2A.jpg
 
+## 🔑 Environment Variables
+
+Create a `.env` file in the project root with the following:
+
+GOOGLE_API_KEY=your_google_api_key_here
+Replace `your_google_api_key_here` with your actual key.
+This way, they know what variables to set up before running the project.
 
 ## ⚡ Setup
 
