@@ -1,0 +1,218 @@
+[
+  {
+    "item_id": "S2A_43QGF_20240828_0_L2A",
+    "datetime": "2024-08-28T05:32:33.380000Z",
+    "cloud_cover": 27.736512,
+    "platform": "sentinel-2a",
+    "constellation": "sentinel-2",
+    "instruments": [
+      "msi"
+    ],
+    "mgrs_tile": null,
+    "preview": "bhopal_s2\\previews\\S2A_43QGF_20240828_0_L2A.jpg"
+  },
+  {
+    "item_id": "S2B_43QGF_20240823_0_L2A",
+    "datetime": "2024-08-23T05:32:34.553000Z",
+    "cloud_cover": 91.843122,
+    "platform": "sentinel-2b",
+    "constellation": "sentinel-2",
+    "instruments": [
+      "msi"
+    ],
+    "mgrs_tile": null,
+    "preview": "bhopal_s2\\previews\\S2B_43QGF_20240823_0_L2A.jpg"
+  },
+  {
+    "item_id": "S2A_43QGF_20240818_0_L2A",
+    "datetime": "2024-08-18T05:32:35.131000Z",
+    "cloud_cover": 92.200476,
+    "platform": "sentinel-2a",
+    "constellation": "sentinel-2",
+    "instruments": [
+      "msi"
+    ],
+    "mgrs_tile": null,
+    "preview": "bhopal_s2\\previews\\S2A_43QGF_20240818_0_L2A.jpg"
+  },
+  {
+    "item_id": "S2B_43QGF_20240813_0_L2A",
+    "datetime": "2024-08-13T05:32:39.362000Z",
+    "cloud_cover": 99.908119,
+    "platform": "sentinel-2b",
+    "constellation": "sentinel-2",
+    "instruments": [
+      "msi"
+    ],
+    "mgrs_tile": null,
+    "preview": "bhopal_s2\\previews\\S2B_43QGF_20240813_0_L2A.jpg"
+  },
+  {
+    "item_id": "S2A_43QGF_20240808_0_L2A",
+    "datetime": "2024-08-08T05:32:35.954000Z",
+    "cloud_cover": 100,
+    "platform": "sentinel-2a",
+    "constellation": "sentinel-2",
+    "instruments": [
+      "msi"
+    ],
+    "mgrs_tile": null,
+    "preview": "bhopal_s2\\previews\\S2A_43QGF_20240808_0_L2A.jpg"
+  },
+  {
+    "item_id": "S2B_43QGF_20240803_0_L2A",
+    "datetime": "2024-08-03T05:32:36.334000Z",
+    "cloud_cover": 100,
+    "platform": "sentinel-2b",
+    "constellation": "sentinel-2",
+    "instruments": [
+      "msi"
+    ],
+    "mgrs_tile": null,
+    "preview": "bhopal_s2\\previews\\S2B_43QGF_20240803_0_L2A.jpg"
+  },
+  {
+    "item_id": "S2A_43QGF_20240729_0_L2A",
+    "datetime": "2024-07-29T05:32:37.784000Z",
+    "cloud_cover": 98.705149,
+    "platform": "sentinel-2a",
+    "constellation": "sentinel-2",
+    "instruments": [
+      "msi"
+    ],
+    "mgrs_tile": null,
+    "preview": "bhopal_s2\\previews\\S2A_43QGF_20240729_0_L2A.jpg"
+  },
+  {
+    "item_id": "S2B_43QGF_20240724_0_L2A",
+    "datetime": "2024-07-24T05:32:38.231000Z",
+    "cloud_cover": 100,
+    "platform": "sentinel-2b",
+    "constellation": "sentinel-2",
+    "instruments": [
+      "msi"
+    ],
+    "mgrs_tile": null,
+    "preview": "bhopal_s2\\previews\\S2B_43QGF_20240724_0_L2A.jpg"
+  },
+  {
+    "item_id": "S2A_43QGF_20240719_0_L2A",
+    "datetime": "2024-07-19T05:32:35.762000Z",
+    "cloud_cover": 83.744383,
+    "platform": "sentinel-2a",
+    "constellation": "sentinel-2",
+    "instruments": [
+      "msi"
+    ],
+    "mgrs_tile": null,
+    "preview": "bhopal_s2\\previews\\S2A_43QGF_20240719_0_L2A.jpg"
+  },
+  {
+    "item_id": "S2B_43QGF_20240714_0_L2A",
+    "datetime": "2024-07-14T05:32:37.717000Z",
+    "cloud_cover": 94.224072,
+    "platform": "sentinel-2b",
+    "constellation": "sentinel-2",
+    "instruments": [
+      "msi"
+    ],
+    "mgrs_tile": null,
+    "preview": "bhopal_s2\\previews\\S2B_43QGF_20240714_0_L2A.jpg"
+  },
+  {
+    "item_id": "S2A_43QGF_20240709_0_L2A",
+    "datetime": "2024-07-09T05:32:38.405000Z",
+    "cloud_cover": 46.906835,
+    "platform": "sentinel-2a",
+    "constellation": "sentinel-2",
+    "instruments": [
+      "msi"
+    ],
+    "mgrs_tile": null,
+    "preview": "bhopal_s2\\previews\\S2A_43QGF_20240709_0_L2A.jpg"
+  },
+  {
+    "item_id": "S2B_43QGF_20240704_0_L2A",
+    "datetime": "2024-07-04T05:32:38.761000Z",
+    "cloud_cover": 99.986285,
+    "platform": "sentinel-2b",
+    "constellation": "sentinel-2",
+    "instruments": [
+      "msi"
+    ],
+    "mgrs_tile": null,
+    "preview": "bhopal_s2\\previews\\S2B_43QGF_20240704_0_L2A.jpg"
+  },
+  {
+    "item_id": "S2A_43QGF_20240629_0_L2A",
+    "datetime": "2024-06-29T05:32:38.137000Z",
+    "cloud_cover": 99.607116,
+    "platform": "sentinel-2a",
+    "constellation": "sentinel-2",
+    "instruments": [
+      "msi"
+    ],
+    "mgrs_tile": null,
+    "preview": "bhopal_s2\\previews\\S2A_43QGF_20240629_0_L2A.jpg"
+  },
+  {
+    "item_id": "S2B_43QGF_20240624_0_L2A",
+    "datetime": "2024-06-24T05:32:38.193000Z",
+    "cloud_cover": 62.544012,
+    "platform": "sentinel-2b",
+    "constellation": "sentinel-2",
+    "instruments": [
+      "msi"
+    ],
+    "mgrs_tile": null,
+    "preview": "bhopal_s2\\previews\\S2B_43QGF_20240624_0_L2A.jpg"
+  },
+  {
+    "item_id": "S2A_43QGF_20240619_0_L2A",
+    "datetime": "2024-06-19T05:32:40.502000Z",
+    "cloud_cover": 87.04887,
+    "platform": "sentinel-2a",
+    "constellation": "sentinel-2",
+    "instruments": [
+      "msi"
+    ],
+    "mgrs_tile": null,
+    "preview": "bhopal_s2\\previews\\S2A_43QGF_20240619_0_L2A.jpg"
+  },
+  {
+    "item_id": "S2B_43QGF_20240614_0_L2A",
+    "datetime": "2024-06-14T05:32:38.241000Z",
+    "cloud_cover": 36.622393,
+    "platform": "sentinel-2b",
+    "constellation": "sentinel-2",
+    "instruments": [
+      "msi"
+    ],
+    "mgrs_tile": null,
+    "preview": "bhopal_s2\\previews\\S2B_43QGF_20240614_0_L2A.jpg"
+  },
+  {
+    "item_id": "S2A_43QGF_20240609_0_L2A",
+    "datetime": "2024-06-09T05:32:41.079000Z",
+    "cloud_cover": 6.091851,
+    "platform": "sentinel-2a",
+    "constellation": "sentinel-2",
+    "instruments": [
+      "msi"
+    ],
+    "mgrs_tile": null,
+    "preview": "bhopal_s2\\previews\\S2A_43QGF_20240609_0_L2A.jpg"
+  },
+  {
+    "item_id": "S2B_43QGF_20240604_0_L2A",
+    "datetime": "2024-06-04T05:32:37.140000Z",
+    "cloud_cover": 32.40003,
+    "platform": "sentinel-2b",
+    "constellation": "sentinel-2",
+    "instruments": [
+      "msi"
+    ],
+    "mgrs_tile": null,
+    "preview": "bhopal_s2\\previews\\S2B_43QGF_20240604_0_L2A.jpg"
+  }
+]

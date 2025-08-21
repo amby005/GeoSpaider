@@ -1,0 +1,14 @@
+torch==2.8.0
+transformers==4.55.2
+chromadb==1.0.20
+langchain==0.3.27
+langchain-chroma==0.2.5
+langchain-community==0.3.27
+pandas==2.3.1
+numpy==2.2.2
+pillow==11.3.0
+matplotlib==3.10.5
+scikit-image==0.25.2
+python-dotenv==1.1.1
+google-generativeai==0.8.5
+imageio==2.37.0
