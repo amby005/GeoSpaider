@@ -42,33 +42,49 @@ I chose the following stack to balance performance, simplicity, and open-source 
 
 - **Docker/Podman** → Reproducible, portable containerized runs.
 
----
+
 
 ## 📂 Project Structure
 
 GeoSpaider/
-│── bhopal_s2/ # Example Sentinel-2 imagery + metadata
-│── notebook/ # Jupyter notebooks (experiments)
-│── src/ # Core source code
-│ ├── demo.py # Demo entrypoint
-│ ├── embed.py # Embedding + vector store builder
-│ ├── fetch.py # Fetch utilities for imagery/metadata
-│ ├── llm.py # LLM integration (transformers, Google GenAI)
-│ └── rag.py # RAG pipeline (retrieval + generation)
-│── vector_store/ # Chroma vector DB
-│── requirements.txt # Python dependencies
-│── Dockerfile # Container definition
-│── README.md # Documentation
+├── bhopal_s2/              # Example Sentinel-2 imagery + metadata
+├── notebook/               # Jupyter notebooks (experiments)
+├── src/                    # Core source code
+│   ├── demo.py             # Demo entrypoint
+│   ├── embed.py            # Embedding + vector store builder
+│   ├── fetch.py            # Fetch utilities for imagery/metadata
+│   ├── llm.py              # LLM integration (transformers, Google GenAI)
+│   └── rag.py              # RAG pipeline (retrieval + generation)
+├── vector_store/           # Chroma vector DB
+├── requirements.txt        # Python dependencies
+├── Dockerfile              # Container definition
+└── README.md               # Documentation
 
-yaml
-Copy code
 
----
+## 🎯 Example Queries
+
+Run inside container or locally:
+
+python -m src.demo --open-images
+
+Example prompts:
+
+show the most recent image of Bhopal
+
+show images with lowest cloud cover
+
+give me the highest cloud cover image available
+
+show me two random images for diversity
+
+Expected output:
+
+Top 1: S2A_43QGF_20240828_0_L2A | date=2024-08-28T05:32:33Z | cloud=27.7
+[preview] bhopal_s2/previews/S2A_43QGF_20240828_0_L2A.jpg
+
 
 ## ⚡ Setup
 
-### Local (Python)
-```bash
 git clone https://github.com/amby005/GeoSpaider.git
 cd GeoSpaider
 
@@ -83,31 +99,27 @@ pip install -r requirements.txt
 
 # Run demo
 python -m src.demo --open-images
+
+
+
 Docker (Optional)
 Build the image:
-
-bash
-Copy code
 docker build -t geospaider .
+
+
 Run with mounted datasets:
 
 On Windows (PowerShell):
 
-powershell
-Copy code
 docker run --rm -it `
   -v C:\Users\amber\Downloads\GeoSpaider\bhopal_s2:/app/bhopal_s2 `
   -v C:\Users\amber\Downloads\GeoSpaider\vector_store:/data/vector_store `
   geospaider python -m src.demo --open-images
-On Linux/Mac:
 
-bash
-Copy code
-docker run --rm -it \
-  -v ./bhopal_s2:/app/bhopal_s2 \
-  -v ./vector_store:/data/vector_store \
-  geospaider python -m src.demo --open-images
+
 📌 Notes & Improvements
+Notes & Improvements
+
 Current Docker image is ~12GB (due to PyTorch + Transformers). Can be reduced by using python:3.11-slim and smaller model weights.
 
 Could add a docker-compose.yaml for easier runs.
