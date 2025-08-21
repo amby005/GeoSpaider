@@ -90,8 +90,6 @@ cd GeoSpaider
 
 python -m venv .venv
 # Activate:
-# On Linux/Mac:
-source .venv/bin/activate
 # On Windows:
 .venv\Scripts\activate
 
