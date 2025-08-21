@@ -1,101 +1,117 @@
-GeoSpaider
+# GeoSpaider
 
 GeoSpaider is a lightweight geospatial data pipeline and RAG (Retrieval-Augmented Generation) system for querying Earth Observation (EO) imagery and metadata.
 
-🚀 Features
+---
 
-Dynamic querying of satellite imagery (metadata-first, with previews).
+## 🚀 Features
+- Dynamic querying of satellite imagery (metadata-first, with previews).
+- Supports filtering and retrieval from metadata CSVs.
+- Image previews for quick inspection.
+- Minimalistic and clean Python structure.
+- Containerized deployment with Docker (optional).
 
-Supports filtering and retrieval from metadata CSVs.
+---
 
-Image previews for quick inspection.
-
-Minimalistic and clean Python structure.
-
-Containerized deployment with Docker (optional).
-
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 I chose the following stack to balance performance, simplicity, and open-source availability:
 
-PyTorch 2.8.0 → torch==2.8.0
-Deep learning backbone, used for embeddings / model inference.
+- **PyTorch 2.8.0** → `torch==2.8.0`  
+  Deep learning backbone, used for embeddings / model inference.
 
-Transformers 4.55.2 → transformers==4.55.2
-Language model utilities for query understanding.
+- **Transformers 4.55.2** → `transformers==4.55.2`  
+  Language model utilities for query understanding.
 
-ChromaDB 1.0.20 → chromadb==1.0.20
-Lightweight vector database for similarity search.
+- **ChromaDB 1.0.20** → `chromadb==1.0.20`  
+  Lightweight vector database for similarity search.
 
-LangChain 0.3.27 (+ integrations) →
+- **LangChain 0.3.27 (+ integrations)** →  
+  `langchain==0.3.27`  
+  `langchain-chroma==0.2.5`  
+  `langchain-community==0.3.27`  
+  Framework for RAG orchestration.
 
-langchain==0.3.27
+- **Data utilities** → `pandas==2.3.1`, `numpy==2.2.2`
 
-langchain-chroma==0.2.5
+- **Image handling** → `pillow==11.3.0`, `matplotlib==3.10.5`, `scikit-image==0.25.2`, `imageio==2.37.0`
 
-langchain-community==0.3.27
-Framework for building the RAG pipeline and connecting with Chroma.
+- **Environment management** → `python-dotenv==1.1.1`
 
-Pandas 2.3.1 / NumPy 2.2.2 →
+- **Optional LLM integration** → `google-generativeai==0.8.5` (Gemini API)
 
-pandas==2.3.1
+- **Docker/Podman** → Reproducible, portable containerized runs.
 
-numpy==2.2.2
-Data wrangling & numerical utilities.
+---
 
-Image Handling & Visualization →
+## 📂 Project Structure
 
-pillow==11.3.0
-
-matplotlib==3.10.5
-
-scikit-image==0.25.2
-
-imageio==2.37.0
-For loading, saving, and previewing satellite images.
-
-python-dotenv 1.1.1 → python-dotenv==1.1.1
-For managing API keys / environment variables.
-
-Google Generative AI 0.8.5 → google-generativeai==0.8.5
-Optional Gemini API support for text/image description.
-
-Docker/Podman → Reproducible, portable containerized runs.
-
-📂 Project Structure
 GeoSpaider/
-│── bhopal_s2/              # Example Sentinel-2 imagery + metadata
-│── notebook/               # Jupyter notebooks (experiments)
-│── src/                    # Core source code
-│   ├── demo.py             # Demo entrypoint
-│   ├── embed.py            # Embedding + vector store builder
-│   ├── fetch.py            # Fetch utilities for imagery/metadata
-│   ├── llm.py              # LLM integration (transformers, Google GenAI)
-│   └── rag.py              # RAG pipeline (retrieval + generation)
-│── vector_store/           # Chroma vector DB
-│── requirements.txt        # Python dependencies
-│── Dockerfile              # Container definition
-│── README.md               # Documentation
+│── bhopal_s2/ # Example Sentinel-2 imagery + metadata
+│── notebook/ # Jupyter notebooks (experiments)
+│── src/ # Core source code
+│ ├── demo.py # Demo entrypoint
+│ ├── embed.py # Embedding + vector store builder
+│ ├── fetch.py # Fetch utilities for imagery/metadata
+│ ├── llm.py # LLM integration (transformers, Google GenAI)
+│ └── rag.py # RAG pipeline (retrieval + generation)
+│── vector_store/ # Chroma vector DB
+│── requirements.txt # Python dependencies
+│── Dockerfile # Container definition
+│── README.md # Documentation
 
-⚡ Setup
-Local (Python)
-git clone https://github.com/<your-username>/GeoSpaider.git
+yaml
+Copy code
+
+---
+
+## ⚡ Setup
+
+### Local (Python)
+```bash
+git clone https://github.com/amby005/GeoSpaider.git
 cd GeoSpaider
+
 python -m venv .venv
-source .venv/bin/activate   # or .venv\Scripts\activate on Windows
+# Activate:
+# On Linux/Mac:
+source .venv/bin/activate
+# On Windows:
+.venv\Scripts\activate
+
 pip install -r requirements.txt
+
+# Run demo
 python -m src.demo --open-images
-
-Docker (Optional, reproducible)
-
+Docker (Optional)
 Build the image:
 
+bash
+Copy code
 docker build -t geospaider .
-
-
 Run with mounted datasets:
 
-docker run --rm -it ^
-  -v C:\Users\amber\Downloads\GeoSpaider\bhopal_s2:/app/bhopal_s2 ^
-  -v C:\Users\amber\Downloads\GeoSpaider\vector_store:/data/vector_store ^
+On Windows (PowerShell):
+
+powershell
+Copy code
+docker run --rm -it `
+  -v C:\Users\amber\Downloads\GeoSpaider\bhopal_s2:/app/bhopal_s2 `
+  -v C:\Users\amber\Downloads\GeoSpaider\vector_store:/data/vector_store `
   geospaider python -m src.demo --open-images
+On Linux/Mac:
+
+bash
+Copy code
+docker run --rm -it \
+  -v ./bhopal_s2:/app/bhopal_s2 \
+  -v ./vector_store:/data/vector_store \
+  geospaider python -m src.demo --open-images
+📌 Notes & Improvements
+Current Docker image is ~12GB (due to PyTorch + Transformers). Can be reduced by using python:3.11-slim and smaller model weights.
+
+Could add a docker-compose.yaml for easier runs.
+
+Additional EO datasets and better cloud-filtering can be integrated.
+
+Future: Automatic download of new Sentinel-2 data.
